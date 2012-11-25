@@ -1,4 +1,3 @@
-
 Introduction
 =============
 
@@ -42,5 +41,5 @@ Links
 [![Build Status](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/badge/icon)](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/)
 
 
-The [maven site](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/site/) link.
+The [maven site Link](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/site/).
 

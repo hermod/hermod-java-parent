@@ -1,14 +1,12 @@
-hermod-java-parent
-==================
-
-hermod-java-parent
-
 
 Introduction
 =============
 
 The purpose of this Hermod project is to define a high level framework to build very fast messaging applications where it's very easy to switch between serialization or publisher/subscriber implementation.
 Drivers
+
+Goals
+=====
 
 You can make an analogy with logger and SLF4J for example.
 
@@ -37,6 +35,9 @@ Sub-projets are
 Hermod, what is the meaning ?
 
 Hermod is the God of Speed and the Messager of the Gods in the norse mythology.
+
+Links
+=====
 
 [![Build Status](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/badge/icon)](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/)
 

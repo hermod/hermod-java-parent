@@ -2,10 +2,9 @@ Introduction
 =============
 
 The purpose of this Hermod project is to define a high level framework to build very fast messaging applications where it's very easy to switch between serialization or publisher/subscriber implementation.
-Drivers
 
-Goals
-=====
+Goals/Drivers
+=============
 
 You can make an analogy with logger and SLF4J for example.
 
@@ -27,10 +26,11 @@ Our 3 drivers are:
 
 Sub-projets are
 
-* hermod-ser-* (Serialization part)
-* hermod-net-* (Network/protocol part)
-* hermod-feed-* (Feed Publish/Subcribe *) 
+* hermod-ser-[api|impl] (Serialization)
+* hermod-net-[api|impl] (Network/Protocol)
+* hermod-feed-[api|impl] (Feed Publish/Subcribe) 
               
+
 Hermod, what is the meaning ?
 
 Hermod is the God of Speed and the Messager of the Gods in the norse mythology.

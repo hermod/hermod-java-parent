@@ -38,4 +38,6 @@ Hermod, what is the meaning ?
 
 Hermod is the God of Speed and the Messager of the Gods in the norse mythology.
 
+[![Build Status](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/badge/icon)](https://buildhive.cloudbees.com/job/hermod/job/hermod-java-parent/)
+
 

@@ -2,17 +2,30 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- add sonatype nexus parent -->
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>${project.artifactId}</description>
-	<url>https://github.com/hermod/${project.artifactId}</url>
+	<url>${projectUrl}</url>
 	<inceptionYear>2012</inceptionYear>
+	<properties>
+		<parentUrl>https://github.com/hermod</parentUrl>
+		<projectUrl>${parentUrl}/${project.artifactId}</projectUrl>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mavenVersion>3.0.0</mavenVersion>
+		<javaVersion>1.6</javaVersion>
+		<slf4jVersion>1.7.2</slf4jVersion>
+	</properties>
 	<organization>
 		<name>hermod</name>
-		<url>https://github.com/hermod/</url>
+		<url>${projectUrl}</url>
 	</organization>
 	<licenses>
 		<license>
@@ -32,7 +45,7 @@
 			</roles>
 			<timezone>+1</timezone>
 			<url>https://github.com/alexandrenavarro</url>
-			<organizationUrl>${project.organization.url}</organizationUrl>
+			<organizationUrl>${project.url}</organizationUrl>
 		</developer>
 	</developers>
 	<!-- TODO create mailing list -->
@@ -51,28 +64,16 @@
 	</prerequisites>
 	<!-- TODO check the url -->
 	<scm>
-		<connection>scm:git:git@github.com/hermod/${project.artifactId}.git</connection>
-		<developerConnection>scm:git:git@github.com/hermod/${project.artifactId}.git</developerConnection>
-		<url>${project.url}</url>
+		<connection>scm:git:${projectUrl}</connection>
+		<developerConnection>scm:git:${projectUrl}</developerConnection>
+		<url>${projectUrl}</url>
 	</scm>
-	<issueManagement>
-		<system>GitHub</system>
-		<url>${project.url}/issues</url>
-	</issueManagement>
-	<!-- TODO on buildhive -->
+	<issueManagement> 
+	<system>GitHub</system> <url>${parentUrl}/${project.artifactId}/issues</url> 
+		</issueManagement>
 	<ciManagement>
-		<system />
-		<url />
-		<notifiers>
-			<notifier>
-				<type />
-				<sendOnError />
-				<sendOnFailure />
-				<sendOnSuccess />
-				<sendOnWarning />
-				<address />
-			</notifier>
-		</notifiers>
+		<system>jenkins</system>
+		<url>https://buildhive.cloudbees.com/view/My Repositories/job/hermod/job/${project.artifactId}</url>
 	</ciManagement>
 	<!-- TODO check the url -->
 	<distributionManagement>
@@ -97,12 +98,6 @@
 		</site>
 		<downloadUrl />
 	</distributionManagement>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mavenVersion>3.0.0</mavenVersion>
-		<javaVersion>1.6</javaVersion>
-		<slf4jVersion>1.7.2</slf4jVersion>
-	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

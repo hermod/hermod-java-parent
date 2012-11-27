@@ -19,9 +19,6 @@
 		</fluidoSkin>
 	</custom>
 	<body>
-		<menu name="Documentation">
-			<item name="Introduction" href="./introduction.html" />
-		</menu>
 		<menu ref="reports" />
 	</body>
 </project>

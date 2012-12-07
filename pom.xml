@@ -61,8 +61,8 @@
 	</prerequisites>
 	<!-- TODO check the url -->
 	<scm>
-		<connection>scm:git:git@github.com/hermod/${project.artifactId}.git</connection>
-		<developerConnection>scm:git:git@github.com/hermod/${project.artifactId}.git</developerConnection>
+		<connection>scm:git:git://github.com/hermod/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git://github.com/hermod/${project.artifactId}.git</developerConnection>
 		<url>${projectUrl}</url>
 	</scm>
 	<issueManagement>

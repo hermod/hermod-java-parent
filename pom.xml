@@ -18,7 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mavenVersion>3.0.0</mavenVersion>
 		<javaVersion>1.7</javaVersion>
-		<slf4jVersion>1.7.4</slf4jVersion>
+		<slf4jVersion>1.7.5</slf4jVersion>
 	</properties>
 	<organization>
 		<name>hermod</name>
@@ -121,7 +121,7 @@
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
-				<version>1.0.10</version>
+				<version>1.0.11</version>
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
@@ -149,6 +149,14 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.0</version>
+					<configuration>
+						<source>${javaVersion}</source>
+						<target>${javaVersion}</target>
+						<optimize>false</optimize>
+						<debug>true</debug>
+						<showDeprecation>true</showDeprecation>
+						<showWarnings>true</showWarnings>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -225,7 +233,8 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>2.6</version>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -262,12 +271,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${javaVersion}</source>
-					<target>${javaVersion}</target>
-					<optimize>false</optimize>
-					<debug>true</debug>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -317,37 +320,15 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
-			<!--plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<inherited>true</inherited>
-				<executions>
-					<execution>
-						<id>enforce-versions</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>${javaVersion}</version>
-								</requireJavaVersion>
-								<requireMavenVersion>
-									<version>${mavenVersion}</version>
-								</requireMavenVersion>
-								<requirePluginVersions>
-									<message>Best Practice is to always define plugin versions!</message>
-									<banLatest>true</banLatest>
-									<banRelease>true</banRelease>
-									<banSnapshots>true</banSnapshots>
-									<phases>clean,install,deploy,site</phases>
-								</requirePluginVersions>
-								<DependencyConvergence />
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin-->
+			<!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> 
+				<inherited>true</inherited> <executions> <execution> <id>enforce-versions</id> 
+				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> 
+				<version>${javaVersion}</version> </requireJavaVersion> <requireMavenVersion> 
+				<version>${mavenVersion}</version> </requireMavenVersion> <requirePluginVersions> 
+				<message>Best Practice is to always define plugin versions!</message> <banLatest>true</banLatest> 
+				<banRelease>true</banRelease> <banSnapshots>true</banSnapshots> <phases>clean,install,deploy,site</phases> 
+				</requirePluginVersions> <DependencyConvergence /> </rules> </configuration> 
+				</execution> </executions> </plugin -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -367,7 +348,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
-					<!--mavenExecutorId>forked-path</mavenExecutorId-->
+					<!--mavenExecutorId>forked-path</mavenExecutorId -->
 					<useReleaseProfile>true</useReleaseProfile>
 				</configuration>
 			</plugin>
@@ -562,6 +543,29 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>buildhive</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<executable>/opt/jdk/jdk1.7.0/bin/javac</executable>
+							<fork>true</fork>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<jvm>/opt/jdk/jdk1.7.0/bin/java</jvm>
+							<forkMode>once</forkMode>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>

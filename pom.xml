@@ -199,6 +199,7 @@
 					<artifactId>jacoco-maven-plugin</artifactId>
 	  				<version>0.6.2.201302030002</version>
   				</plugin>
+  				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>

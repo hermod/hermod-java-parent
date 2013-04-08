@@ -133,7 +133,7 @@
 		</dependencies>
 	</dependencyManagement>
 	<build>
-		<defaultGoal>clean</defaultGoal>
+		<defaultGoal>clean install</defaultGoal>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -194,6 +194,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.14</version>
 				</plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+	  				<version>0.6.2.201302030002</version>
+  				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
@@ -321,6 +326,41 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+					<!--execution>
+						<id>check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<check>
+								<classRatio>100</classRatio>
+								<instructionRatio>90</instructionRatio>
+								<methodRatio>95</methodRatio>
+								<branchRatio>85</branchRatio>
+								<complexityRatio>85</complexityRatio>
+								<lineRatio>90</lineRatio>
+							</check>
+						</configuration>
+					</execution-->
+				</executions>
+			</plugin>
 			<!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> 
 				<inherited>true</inherited> <executions> <execution> <id>enforce-versions</id> 
 				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> 
@@ -410,11 +450,12 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-			<plugin>
+			<!-- Remove because can't parse some jdk1.7 syntax -->
+			<!--plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>javancss-maven-plugin</artifactId>
 				<version>2.0</version>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jdepend-maven-plugin</artifactId>
@@ -454,7 +495,8 @@
 					<effort>Default</effort>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- Remove cobertura because does not work with jdk1.7 syntax, use jacoco instead -->
+			<!--plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.5.2</version>
@@ -464,7 +506,7 @@
 						<format>html</format>
 					</formats>
 				</configuration>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>clirr-maven-plugin</artifactId>
@@ -575,6 +617,9 @@
 							<jvm>/opt/jdk/jdk1.7.0/bin/java</jvm>
 							<forkMode>once</forkMode>
 						</configuration>
+					</plugin>
+					<plugin>
+						
 					</plugin>
 				</plugins>
 			</build>

@@ -240,11 +240,6 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>2.6</version>
 				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.9</version>
-				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
@@ -605,6 +600,10 @@
 							<forkMode>once</forkMode>
 						</configuration>
 					</plugin>
+				</plugins>
+			</build>
+			<reporting>
+				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
@@ -613,7 +612,7 @@
 						</configuration>
 					</plugin>
 				</plugins>
-			</build>
+			</reporting>
 		</profile>
 	</profiles>
 </project>

@@ -609,7 +609,20 @@
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<configuration>
 							<javadocExecutable>${javaHome}/bin/javadoc</javadocExecutable>
+							<encoding>iso-8859-1</encoding>
+							<minmemory>128m</minmemory>
+							<maxmemory>512m</maxmemory>
+							<quiet>true</quiet>
+							<source>1.7</source>
 						</configuration>
+						<reportSets>
+							<reportSet>
+								<id>html</id>
+								<reports>
+									<report>javadoc</report>
+								</reports>
+							</reportSet>
+						</reportSets>
 					</plugin>
 				</plugins>
 			</reporting>

@@ -19,6 +19,7 @@
 		<mavenVersion>3.0.0</mavenVersion>
 		<javaVersion>1.7</javaVersion>
 		<surefireVersion>2.14.1</surefireVersion>
+		<jacocoVersion>0.6.2.201302030002</jacocoVersion>
 		<slf4jVersion>1.7.5</slf4jVersion>
 	</properties>
 	<organization>
@@ -204,7 +205,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.6.2.201302030002</version>
+					<version>${jacocoVersion}</version>
 				</plugin>
 
 				<plugin>
@@ -537,6 +538,11 @@
 						</reports>
 					</reportSet>
 				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacocoVersion}</version>
 			</plugin>
 		</plugins>
 	</reporting>

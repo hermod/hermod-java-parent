@@ -285,6 +285,11 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.pitest</groupId>
+					<artifactId>pitest-maven</artifactId>
+					<version>0.29</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -408,6 +413,29 @@
 							<outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
 							<includeReports>false</includeReports>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<configuration>
+					<targetClasses>
+						<param>com.github.hermod.*</param>
+					</targetClasses>
+					<targetTests>
+						<param>com.github.hermod.*</param>
+					</targetTests>
+					<reportsDirectory>${project.reporting.outputDirectory}/pit-reports</reportsDirectory>
+					<timestampedReports>false</timestampedReports>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pit</id>
+						<phase>site</phase>
+						<goals>
+							<goal>mutationCoverage</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>

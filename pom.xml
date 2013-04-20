@@ -140,6 +140,12 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
 	<build>
 		<defaultGoal>clean install</defaultGoal>
 		<pluginManagement>
@@ -428,6 +434,7 @@
 					</targetTests>
 					<reportsDirectory>${project.reporting.outputDirectory}/pit-reports</reportsDirectory>
 					<timestampedReports>false</timestampedReports>
+					<failWhenNoMutations>false</failWhenNoMutations>
 				</configuration>
 				<executions>
 					<execution>

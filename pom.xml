@@ -127,6 +127,12 @@
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
+				<groupId>edu.washington.cs.types.checker</groupId>
+				<artifactId>checker-framework</artifactId>
+				<version>1.6.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.11</version>

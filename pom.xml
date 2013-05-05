@@ -316,7 +316,7 @@
 				<plugin>
 					<groupId>edu.washington.cs.types.checker</groupId>
 					<artifactId>checker-maven-plugin</artifactId>
-					<version>${checkFrameworkVersion}</version>
+					<version>${checkerFrameworkVersion}</version>
 					<executions>
 						<execution>
 							<phase>process-classes</phase>
@@ -367,6 +367,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>edu.washington.cs.types.checker</groupId>
+				<artifactId>checker-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

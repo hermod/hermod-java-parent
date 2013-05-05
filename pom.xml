@@ -16,11 +16,16 @@
 		<parentUrl>https://github.com/hermod</parentUrl>
 		<projectUrl>${parentUrl}/${project.artifactId}</projectUrl>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mavenVersion>3.0.0</mavenVersion>
 		<javaVersion>1.7</javaVersion>
+		<mavenVersion>3.0.0</mavenVersion>
 		<surefireVersion>2.14.1</surefireVersion>
 		<jacocoVersion>0.6.2.201302030002</jacocoVersion>
 		<slf4jVersion>1.7.5</slf4jVersion>
+		<logbackVersion>1.0.12</logbackVersion>
+		<checkerFrameworkVersion>1.6.1</checkerFrameworkVersion>
+		<junitVersion>4.11</junitVersion>
+		<assertjVersion>1.1.0</assertjVersion>
+		<gsonVersion>2.2.3</gsonVersion>
 	</properties>
 	<organization>
 		<name>hermod</name>
@@ -123,31 +128,31 @@
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
-				<version>1.0.12</version>
+				<version>${logbackVersion}</version>
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
 				<groupId>edu.washington.cs.types.checker</groupId>
 				<artifactId>checker-framework</artifactId>
-				<version>1.6.1</version>
+				<version>${checkerFrameworkVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.11</version>
+				<version>${junitVersion}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.assertj</groupId>
 				<artifactId>assertj-core</artifactId>
-				<version>1.1.0</version>
+				<version>${assertjVersion}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>
-				<version>2.2.3</version>
+				<version>${gsonVersion}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -307,6 +312,25 @@
 					<groupId>org.pitest</groupId>
 					<artifactId>pitest-maven</artifactId>
 					<version>0.30</version>
+				</plugin>
+				<plugin>
+					<groupId>edu.washington.cs.types.checker</groupId>
+					<artifactId>checker-maven-plugin</artifactId>
+					<version>${checkFrameworkVersion}</version>
+					<executions>
+						<execution>
+							<phase>process-classes</phase>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<processors>
+							<processor>checkers.nullness.NullnessChecker</processor>
+						</processors>
+						<failOnError>true</failOnError>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>

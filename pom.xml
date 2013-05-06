@@ -313,7 +313,7 @@
 					<artifactId>pitest-maven</artifactId>
 					<version>0.30</version>
 				</plugin>
-				<plugin>
+				<!--plugin>
 					<groupId>edu.washington.cs.types.checker</groupId>
 					<artifactId>checker-maven-plugin</artifactId>
 					<version>${checkerFrameworkVersion}</version>
@@ -331,7 +331,7 @@
 						</processors>
 						<failOnError>true</failOnError>
 					</configuration>
-				</plugin>
+				</plugin-->
 			</plugins>
 		</pluginManagement>
 		<plugins>

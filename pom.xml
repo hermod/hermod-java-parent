@@ -24,8 +24,9 @@
 		<logbackVersion>1.0.13</logbackVersion>
 		<checkerFrameworkVersion>1.6.4</checkerFrameworkVersion>
 		<junitVersion>4.11</junitVersion>
-		<assertjVersion>1.3.0</assertjVersion>
+		<assertjVersion>1.4.0</assertjVersion>
 		<gsonVersion>2.2.4</gsonVersion>
+		<nettyVersion>4.0.9.Final</nettyVersion>
 	</properties>
 	<organization>
 		<name>hermod</name>
@@ -124,6 +125,13 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>log4j-over-slf4j</artifactId>
 				<version>${slf4jVersion}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-buffer</artifactId>
+				<version>${nettyVersion}</version>
+				<type>bundle</type>
+				<optional>true</optional>
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
@@ -313,25 +321,11 @@
 					<artifactId>pitest-maven</artifactId>
 					<version>0.30</version>
 				</plugin>
-				<!--plugin>
-					<groupId>edu.washington.cs.types.checker</groupId>
-					<artifactId>checker-maven-plugin</artifactId>
-					<version>${checkerFrameworkVersion}</version>
-					<executions>
-						<execution>
-							<phase>process-classes</phase>
-							<goals>
-								<goal>check</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<processors>
-							<processor>checkers.nullness.NullnessChecker</processor>
-						</processors>
-						<failOnError>true</failOnError>
-					</configuration>
-				</plugin-->
+				<!--plugin> <groupId>edu.washington.cs.types.checker</groupId> <artifactId>checker-maven-plugin</artifactId> 
+					<version>${checkerFrameworkVersion}</version> <executions> <execution> <phase>process-classes</phase> 
+					<goals> <goal>check</goal> </goals> </execution> </executions> <configuration> 
+					<processors> <processor>checkers.nullness.NullnessChecker</processor> </processors> 
+					<failOnError>true</failOnError> </configuration> </plugin -->
 			</plugins>
 		</pluginManagement>
 		<plugins>

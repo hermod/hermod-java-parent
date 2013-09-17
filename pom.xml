@@ -70,8 +70,8 @@
 	<scm>
 		<connection>scm:git:git://github.com/hermod/${project.artifactId}.git</connection>
 		<!--developerConnection>scm:git:git://github.com/hermod/${project.artifactId}.git</developerConnection-->
-		<developerConnection>scm:git:git://github.com:hermod/${project.artifactId}.git</developerConnection>
-		<!--developerConnection>scm:git:ssh://git@github.com:hermod/${project.artifactId}.git</developerConnection-->
+		<!--developerConnection>scm:git:git://github.com:hermod/${project.artifactId}.git</developerConnection-->
+		<developerConnection>scm:git:ssh://git@github.com:hermod/${project.artifactId}.git</developerConnection>
 		
     <tag>hermod-java-parent-0.0.1</tag>
   </scm>

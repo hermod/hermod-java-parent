@@ -324,6 +324,11 @@
 					<artifactId>pitest-maven</artifactId>
 					<version>0.30</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9</version>
+				</plugin>
 				<!--plugin> <groupId>edu.washington.cs.types.checker</groupId> <artifactId>checker-maven-plugin</artifactId> 
 					<version>${checkerFrameworkVersion}</version> <executions> <execution> <phase>process-classes</phase> 
 					<goals> <goal>check</goal> </goals> </execution> </executions> <configuration> 
@@ -486,13 +491,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
+				<artifactId>maven-javadoc-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
+						<id>attach-javadocs</id>
 						<goals>
-							<goal>sign</goal>
+							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -683,18 +687,6 @@
 								<phase>verify</phase>
 								<goals>
 									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
 								</goals>
 							</execution>
 						</executions>

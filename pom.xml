@@ -5,7 +5,7 @@
 		<version>7</version> </parent -->
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>${project.artifactId}</description>
@@ -445,6 +445,7 @@
 				<configuration>
 					<!--mavenExecutorId>forked-path</mavenExecutorId -->
 					<useReleaseProfile>true</useReleaseProfile>
+					<releaseProfiles>release-profile</releaseProfiles>
 				</configuration>
 			</plugin>
 			<plugin>

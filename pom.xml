@@ -689,6 +689,9 @@
 								</goals>
 							</execution>
 						</executions>
+						<configuration>
+							<passphrase>Allez l'OM</passphrase>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>

@@ -690,6 +690,7 @@
 							</execution>
 						</executions>
 						<configuration>
+							<!-- temporary -->
 							<passphrase>Allez l'OM</passphrase>
 						</configuration>
 					</plugin>

@@ -66,11 +66,8 @@
 	<prerequisites>
 		<maven>${mavenVersion}</maven>
 	</prerequisites>
-	<!-- TODO check the url -->
 	<scm>
 		<connection>scm:git:git://github.com/hermod/${project.artifactId}.git</connection>
-		<!--developerConnection>scm:git:git://github.com/hermod/${project.artifactId}.git</developerConnection -->
-		<!--developerConnection>scm:git:git://github.com:hermod/${project.artifactId}.git</developerConnection -->
 		<developerConnection>scm:git:ssh://git@github.com/hermod/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/hermod/hermod-java-parent.git</url>
 		<tag>hermod-java-parent-0.0.1</tag>
@@ -690,10 +687,6 @@
 								</goals>
 							</execution>
 						</executions>
-						<configuration>
-							<!-- temporary -->
-							<passphrase>Allez l'OM</passphrase>
-						</configuration>
 					</plugin>
 				</plugins>
 			</build>

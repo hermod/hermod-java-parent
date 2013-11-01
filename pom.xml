@@ -220,14 +220,12 @@
 					<artifactId>maven-verifier-plugin</artifactId>
 					<version>1.0</version>
 				</plugin>
-				
 				<!-- Packaging types -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>2.4</version>
 				</plugin>
-				
 				<!-- Reporting plugins -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -239,7 +237,6 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>2.9.1</version>
 				</plugin>
-				
 				<!-- Tools -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -276,7 +273,6 @@
 					<artifactId>maven-source-plugin</artifactId>
 					<version>2.2.1</version>
 				</plugin>
-				
 				<!-- Others -->
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -323,6 +319,9 @@
 										<artifactId>
 											maven-bundle-plugin
 										</artifactId>
+										<versionRange>
+											[2.3.7,)
+										</versionRange>
 										<goals>
 											<goal>manifest</goal>
 										</goals>
@@ -413,15 +412,37 @@
 						<lineRatio>90</lineRatio> </check> </configuration> </execution -->
 				</executions>
 			</plugin>
-			<!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> 
-				<inherited>true</inherited> <executions> <execution> <id>enforce-versions</id> 
-				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> 
-				<version>${javaVersion}</version> </requireJavaVersion> <requireMavenVersion> 
-				<version>${mavenVersion}</version> </requireMavenVersion> <requirePluginVersions> 
-				<message>Best Practice is to always define plugin versions!</message> <banLatest>true</banLatest> 
-				<banRelease>true</banRelease> <banSnapshots>true</banSnapshots> <phases>clean,install,deploy,site</phases> 
-				</requirePluginVersions> <DependencyConvergence /> </rules> </configuration> 
-				</execution> </executions> </plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<id>enforce-versions</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>${javaVersion}</version>
+								</requireJavaVersion>
+								<requireMavenVersion>
+									<version>${mavenVersion}</version>
+								</requireMavenVersion>
+								<!--requirePluginVersions>
+									<message>Best Practice is to always define plugin versions!</message>
+									<banLatest>true</banLatest>
+									<banRelease>true</banRelease>
+									<banSnapshots>true</banSnapshots>
+									<phases>clean,install,deploy,site</phases>
+								</requirePluginVersions>
+								<DependencyConvergence /-->
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -531,7 +552,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9</version>
 				<configuration>
-					<encoding>iso-8859-1</encoding>
+					<encoding>UTF8</encoding>
 					<minmemory>128m</minmemory>
 					<maxmemory>512m</maxmemory>
 					<quiet>true</quiet>

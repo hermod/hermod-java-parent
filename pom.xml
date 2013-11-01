@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>${project.artifactId}</description>
@@ -72,7 +72,9 @@
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>${parentUrl}/${project.artifactId}/issues</url>
+		<!--url>${parentUrl}/${project.artifactId}/issues/</url-->
+		
+		    <url>https://github.com/hermod/hermod-java-parent/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>jenkins</system>
@@ -227,6 +229,11 @@
 					<version>2.4</version>
 				</plugin>
 				<!-- Reporting plugins -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-changes-plugin</artifactId>
+					<version>2.9</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
@@ -430,14 +437,10 @@
 								<requireMavenVersion>
 									<version>${mavenVersion}</version>
 								</requireMavenVersion>
-								<!--requirePluginVersions>
-									<message>Best Practice is to always define plugin versions!</message>
-									<banLatest>true</banLatest>
-									<banRelease>true</banRelease>
-									<banSnapshots>true</banSnapshots>
-									<phases>clean,install,deploy,site</phases>
-								</requirePluginVersions>
-								<DependencyConvergence /-->
+								<!--requirePluginVersions> <message>Best Practice is to always define 
+									plugin versions!</message> <banLatest>true</banLatest> <banRelease>true</banRelease> 
+									<banSnapshots>true</banSnapshots> <phases>clean,install,deploy,site</phases> 
+									</requirePluginVersions> <DependencyConvergence / -->
 							</rules>
 						</configuration>
 					</execution>
@@ -519,6 +522,38 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- does not work -->
+			<!--plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>announcement-generate</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>announcement-generate</goal>
+							<goal>announcement-mail</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<smtpHost>smtp.free.fr</smtpHost>
+					<mailSender>
+						<name>Alexandre Navarro</name>
+						<email>alexandre.j.navarro@gmail.com</email>
+					</mailSender>
+					<reportSets>
+						<reportSet>
+							<reports>
+								<report>github-report</report>
+							</reports>
+						</reportSet>
+					</reportSets>
+					<toAddresses>
+						<toAddress>alexandre.j.navarro@gmail.com</toAddress>
+					</toAddresses>
+				</configuration>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
@@ -589,7 +624,6 @@
 				<reportSets>
 					<reportSet>
 						<reports>
-							<report>changes-report</report>
 							<report>github-report</report>
 						</reports>
 					</reportSet>

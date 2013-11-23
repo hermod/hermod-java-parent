@@ -20,9 +20,9 @@
 		<slf4jVersion>1.7.5</slf4jVersion>
 		<logbackVersion>1.0.13</logbackVersion>
 		<junitVersion>4.11</junitVersion>
-		<assertjVersion>1.4.0</assertjVersion>
+		<assertjVersion>1.5.0</assertjVersion>
 		<gsonVersion>2.2.4</gsonVersion>
-		<nettyVersion>4.0.11.Final</nettyVersion>
+		<nettyVersion>4.0.12.Final</nettyVersion>
 	</properties>
 	<organization>
 		<name>hermod</name>

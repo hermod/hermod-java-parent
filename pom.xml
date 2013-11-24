@@ -35,7 +35,7 @@
 		<changelogVersion>2.2</changelogVersion>
 		<changesVersion>2.9</changesVersion>
 		<checkstyleVersion>2.11</checkstyleVersion>
-		<javadocVersion>2.9.1</javadocVersion>
+		<javadocVersion>2.9</javadocVersion>
 		<jxrVersion>2.3</jxrVersion>
 		<linkcheckVersion>1.1</linkcheckVersion>
 		<pmdVersion>3.0.1</pmdVersion>

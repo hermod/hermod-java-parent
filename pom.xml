@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
@@ -9,14 +10,55 @@
 	<url>${projectUrl}</url>
 	<inceptionYear>2012</inceptionYear>
 	<properties>
+		<!-- project urls -->
 		<parentUrl>https://github.com/hermod</parentUrl>
 		<projectUrl>${parentUrl}/${project.artifactId}</projectUrl>
+		<!-- encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- tools version -->
 		<javaVersion>1.7</javaVersion>
 		<mavenVersion>3.0.0</mavenVersion>
+		<!-- plugins version -->
+		<!-- core plugins version -->
+		<cleanVersion>2.5</cleanVersion>
+		<compilerVersion>3.1</compilerVersion>
+		<deployVersion>2.8.1</deployVersion>
+		<failsafeVersion>2.16</failsafeVersion>
+		<installVersion>2.5.1</installVersion>
+		<resourcesVersion>2.6</resourcesVersion>
+		<siteVersion>3.3</siteVersion>
 		<surefireVersion>2.16</surefireVersion>
-		<jacocoVersion>0.6.2.201302030002</jacocoVersion>
+		<verifierVersion>1.0</verifierVersion>
+		<!-- packaging plugins version -->
+		<jarVersion>2.4</jarVersion>
+		<!-- reporting plugins version -->
+		<changelogVersion>2.2</changelogVersion>
+		<changesVersion>2.9</changesVersion>
+		<checkstyleVersion>2.11</checkstyleVersion>
+		<javadocVersion>2.9.1</javadocVersion>
+		<jxrVersion>2.3</jxrVersion>
+		<linkCheckVersion>1.1</linkCheckVersion>
+		<pmdVersion>3.0.1</pmdVersion>
+		<projectInfoReports>2.7</projectInfoReports>
+		<!-- tools plugins version -->
+		<antrunVersion>1.7</antrunVersion>
+		<assemblyVersion>2.4</assemblyVersion>
+		<dependencyVersion>2.8</dependencyVersion>
+		<enforcerVersion>1.3.1</enforcerVersion>
+		<gpgVersion>1.4</gpgVersion>
+		<releaseVersion>2.4.2</releaseVersion>
+		<sourceVersion>2.2.1</sourceVersion>
+		<!-- other plugins version -->
 		<coberturaVersion>2.6</coberturaVersion>
+		<jacocoVersion>0.6.2.201302030002</jacocoVersion>
+		<pitestVersion>0.31</pitestVersion>
+		<versionsVersion>2.1</versionsVersion>
+		<pdfVersion>1.2</pdfVersion>
+		<bundleVersion>2.4.0</bundleVersion>
+		<lifecycleMappingVersion>1.0.0</lifecycleMappingVersion>
+
+
+		<!-- dependencies version -->
 		<slf4jVersion>1.7.5</slf4jVersion>
 		<logbackVersion>1.0.13</logbackVersion>
 		<junitVersion>4.11</junitVersion>
@@ -71,9 +113,9 @@
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<!--url>${parentUrl}/${project.artifactId}/issues/</url-->
-		
-		    <url>https://github.com/hermod/hermod-java-parent/issues</url>
+		<!--url>${parentUrl}/${project.artifactId}/issues/</url -->
+
+		<url>https://github.com/hermod/hermod-java-parent/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>jenkins</system>
@@ -171,12 +213,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.5</version>
+					<version>${cleanVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
+					<version>${compilerVersion}</version>
 					<configuration>
 						<source>${javaVersion}</source>
 						<target>${javaVersion}</target>
@@ -189,27 +231,27 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.1</version>
+					<version>${deployVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.16</version>
+					<version>${failsafeVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.1</version>
+					<version>${installVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.6</version>
+					<version>${resourcesVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
+					<version>${siteVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -219,65 +261,90 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-verifier-plugin</artifactId>
-					<version>1.0</version>
+					<version>${verifierVersion}</version>
 				</plugin>
 				<!-- Packaging types -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
+					<version>${jarVersion}</version>
 				</plugin>
 				<!-- Reporting plugins -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-changelog-plugin</artifactId>
+					<version>${changelogVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-changes-plugin</artifactId>
-					<version>2.9</version>
+					<version>${changesVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>${checkstyleVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jxr-plugin</artifactId>
+					<version>${jxrVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-linkcheck-plugin</artifactId>
+					<version>${linkcheckVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>${pmdVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>2.6</version>
+					<version>${projectInfoReportsVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.9.1</version>
+					<version>${javadocVersion}</version>
 				</plugin>
 				<!-- Tools -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.7</version>
+					<version>${antrunVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.4</version>
+					<version>${assemblyVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.8</version>
+					<version>${dependencyVersion></version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>1.3</version>
+					<version>${enforcerVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.4</version>
+					<version>${gpgVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>2.4.2</version>
+					<version>${releaseVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>2.2.1</version>
+					<version>${sourceVersion}</version>
 				</plugin>
 				<!-- Others -->
 				<plugin>
@@ -293,27 +360,42 @@
 				<plugin>
 					<groupId>org.pitest</groupId>
 					<artifactId>pitest-maven</artifactId>
-					<version>0.31</version>
+					<version>${pitestVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
-					<version>2.1</version>
+					<version>${versionsVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-pdf-plugin</artifactId>
-					<version>1.2</version>
+					<version>${pdfVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>2.4.0</version>
+					<version>${bundleVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>findbugs-maven-plugin</artifactId>
+					<version>${findbugsVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>clirr-maven-plugin</artifactId>
+					<version>${clirrVersion}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.googlecode.maven-overview-plugin</groupId>
+					<artifactId>maven-overview-plugin</artifactId>
+					<version>${overviewVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
+					<version>${lifecycleMappingVersion}</version>
 					<configuration>
 						<lifecycleMappingMetadata>
 							<pluginExecutions>
@@ -522,37 +604,14 @@
 				</executions>
 			</plugin>
 			<!-- does not work -->
-			<!--plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changes-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>announcement-generate</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>announcement-generate</goal>
-							<goal>announcement-mail</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<smtpHost>smtp.free.fr</smtpHost>
-					<mailSender>
-						<name>Alexandre Navarro</name>
-						<email>alexandre.j.navarro@gmail.com</email>
-					</mailSender>
-					<reportSets>
-						<reportSet>
-							<reports>
-								<report>github-report</report>
-							</reports>
-						</reportSet>
-					</reportSets>
-					<toAddresses>
-						<toAddress>alexandre.j.navarro@gmail.com</toAddress>
-					</toAddresses>
-				</configuration>
-			</plugin-->
+			<!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-changes-plugin</artifactId> 
+				<executions> <execution> <id>announcement-generate</id> <phase>deploy</phase> 
+				<goals> <goal>announcement-generate</goal> <goal>announcement-mail</goal> 
+				</goals> </execution> </executions> <configuration> <smtpHost>smtp.free.fr</smtpHost> 
+				<mailSender> <name>Alexandre Navarro</name> <email>alexandre.j.navarro@gmail.com</email> 
+				</mailSender> <reportSets> <reportSet> <reports> <report>github-report</report> 
+				</reports> </reportSet> </reportSets> <toAddresses> <toAddress>alexandre.j.navarro@gmail.com</toAddress> 
+				</toAddresses> </configuration> </plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
@@ -568,7 +627,7 @@
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
 						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.3</version>
+						<version>1.5</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -578,19 +637,23 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<version>${changelogVersion}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.6</version>
+				<version>${projectInfoReportsVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9</version>
+				<version>${javadocVersion}</version>
 				<configuration>
-					<encoding>UTF8</encoding>
 					<minmemory>128m</minmemory>
 					<maxmemory>512m</maxmemory>
 					<quiet>true</quiet>
-					<source>1.7</source>
+					<source>${javaVersion}</source>
 				</configuration>
 				<reportSets>
 					<reportSet>
@@ -604,7 +667,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
-				<version>2.3</version>
+				<version>${jxrVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -619,7 +682,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.9</version>
+				<version>${changesVersion}</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -634,17 +697,17 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jdepend-maven-plugin</artifactId>
-				<version>2.0-beta-2</version>
+				<version>${jdependVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.10</version>
+				<version>${checkstyleVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.0.1</version>
+				<version>${pmdVersion}</version>
 				<configuration>
 					<minimumTokens>150</minimumTokens>
 					<targetJdk>${javaVersion}</targetJdk>
@@ -663,7 +726,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>${findbugsVersion}</version>
 				<configuration>
 					<xmlOutput>true</xmlOutput>
 					<threshold>Normal</threshold>
@@ -684,17 +747,17 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>clirr-maven-plugin</artifactId>
-				<version>2.5</version>
+				<version>${clirrVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>com.googlecode.maven-overview-plugin</groupId>
 				<artifactId>maven-overview-plugin</artifactId>
-				<version>1.6</version>
+				<version>${overviewVersion}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.0</version>
+				<version>${versionsVersion}</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -713,7 +776,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-linkcheck-plugin</artifactId>
-				<version>1.1</version>
+				<version>${linkcheckVersion}</version>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -770,7 +833,6 @@
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<configuration>
 							<javadocExecutable>${javaHome}/bin/javadoc</javadocExecutable>
-							<encoding>iso-8859-1</encoding>
 							<minmemory>128m</minmemory>
 							<maxmemory>512m</maxmemory>
 							<quiet>true</quiet>

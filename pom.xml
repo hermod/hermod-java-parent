@@ -37,9 +37,9 @@
 		<checkstyleVersion>2.11</checkstyleVersion>
 		<javadocVersion>2.9.1</javadocVersion>
 		<jxrVersion>2.3</jxrVersion>
-		<linkCheckVersion>1.1</linkCheckVersion>
+		<linkcheckVersion>1.1</linkcheckVersion>
 		<pmdVersion>3.0.1</pmdVersion>
-		<projectInfoReports>2.7</projectInfoReports>
+		<projectInfoReportsVersion>2.7</projectInfoReportsVersion>
 		<!-- tools plugins version -->
 		<antrunVersion>1.7</antrunVersion>
 		<assemblyVersion>2.4</assemblyVersion>
@@ -56,8 +56,9 @@
 		<pdfVersion>1.2</pdfVersion>
 		<bundleVersion>2.4.0</bundleVersion>
 		<lifecycleMappingVersion>1.0.0</lifecycleMappingVersion>
-
-
+		<findbugsVersion>2.5.2</findbugsVersion>
+		<overviewVersion>1.6</overviewVersion>
+		<clirrVersion>2.6</clirrVersion>
 		<!-- dependencies version -->
 		<slf4jVersion>1.7.5</slf4jVersion>
 		<logbackVersion>1.0.13</logbackVersion>
@@ -603,15 +604,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- does not work -->
-			<!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-changes-plugin</artifactId> 
-				<executions> <execution> <id>announcement-generate</id> <phase>deploy</phase> 
-				<goals> <goal>announcement-generate</goal> <goal>announcement-mail</goal> 
-				</goals> </execution> </executions> <configuration> <smtpHost>smtp.free.fr</smtpHost> 
-				<mailSender> <name>Alexandre Navarro</name> <email>alexandre.j.navarro@gmail.com</email> 
-				</mailSender> <reportSets> <reportSet> <reports> <report>github-report</report> 
-				</reports> </reportSet> </reportSets> <toAddresses> <toAddress>alexandre.j.navarro@gmail.com</toAddress> 
-				</toAddresses> </configuration> </plugin -->
+			<!-- TODO add changes mail announcement-mail -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>

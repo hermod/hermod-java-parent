@@ -33,6 +33,7 @@
 		<!-- reporting plugins version -->
 		<changelogVersion>2.2</changelogVersion>
 		<changesVersion>2.9</changesVersion>
+		<jdependVersion>2.0-beta-2</jdependVersion>
 		<checkstyleVersion>2.11</checkstyleVersion>
 		<javadocVersion>2.9</javadocVersion>
 		<jxrVersion>2.3</jxrVersion>
@@ -324,7 +325,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>${dependencyVersion&gt;</version>
+					<version>${dependencyVersion}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

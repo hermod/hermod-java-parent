@@ -36,8 +36,8 @@
 		<changesVersion>2.9</changesVersion>
 		<jdependVersion>2.0-beta-2</jdependVersion>
 		<checkstyleVersion>2.11</checkstyleVersion>
-		<javadocVersion>2.9</javadocVersion>
-		<jxrVersion>2.3</jxrVersion>
+		<javadocPluginVersion>2.9.1</javadocPluginVersion>
+		<jxrVersion>2.4</jxrVersion>
 		<linkcheckVersion>1.1</linkcheckVersion>
 		<pmdVersion>3.0.1</pmdVersion>
 		<projectInfoReportsVersion>2.7</projectInfoReportsVersion>
@@ -51,15 +51,15 @@
 		<sourceVersion>2.2.1</sourceVersion>
 		<!-- other plugins version -->
 		<coberturaVersion>2.6</coberturaVersion>
-		<jacocoVersion>0.6.2.201302030002</jacocoVersion>
-		<pitestVersion>0.31</pitestVersion>
+		<jacocoVersion>0.6.4.201312101107</jacocoVersion>
+		<pitestVersion>0.32</pitestVersion>
 		<versionsVersion>2.1</versionsVersion>
 		<pdfVersion>1.2</pdfVersion>
 		<bundleVersion>2.4.0</bundleVersion>
 		<lifecycleMappingVersion>1.0.0</lifecycleMappingVersion>
-		<findbugsVersion>2.5.2</findbugsVersion>
+		<findbugsVersion>2.5.3</findbugsVersion>
 		<overviewVersion>1.6</overviewVersion>
-		<clirrVersion>2.6</clirrVersion>
+		<clirrVersion>2.6.1</clirrVersion>
 		<javaFormatterPlugin>0.4</javaFormatterPlugin>
 		<!-- dependencies version -->
 		<slf4jVersion>1.7.5</slf4jVersion>
@@ -311,7 +311,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>${javadocVersion}</version>
+					<version>${javadocPluginVersion}</version>
 				</plugin>
 				<!-- Tools -->
 				<plugin>
@@ -687,12 +687,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>${javadocVersion}</version>
+				<version>${javadocPluginVersion}</version>
 				<configuration>
 					<minmemory>128m</minmemory>
 					<maxmemory>512m</maxmemory>
 					<quiet>true</quiet>
 					<source>${javaVersion}</source>
+					<javadocVersion>${javaVersion}</javadocVersion>
 				</configuration>
 				<reportSets>
 					<reportSet>
@@ -876,6 +877,7 @@
 							<maxmemory>512m</maxmemory>
 							<quiet>true</quiet>
 							<source>${javaVersion}</source>
+							<javadocVersion>${javaVersion}</javadocVersion>
 						</configuration>
 						<reportSets>
 							<reportSet>

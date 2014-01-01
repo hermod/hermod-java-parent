@@ -16,7 +16,7 @@
 		<!-- encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- tools version -->
-		<javaVersion>1.7</javaVersion>
+		<javaVersion>1.6</javaVersion>
 		<mavenVersion>3.0.0</mavenVersion>
 		<!-- plugins version -->
 		<!-- core plugins version -->

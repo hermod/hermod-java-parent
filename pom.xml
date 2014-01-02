@@ -17,6 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- tools version -->
 		<javaVersion>1.6</javaVersion>
+		<javadocVersion>${javaVersion}</javadocVersion>
 		<mavenVersion>3.0.0</mavenVersion>
 		<!-- plugins version -->
 		<!-- core plugins version -->
@@ -713,7 +714,6 @@
 					<maxmemory>512m</maxmemory>
 					<quiet>true</quiet>
 					<source>${javaVersion}</source>
-					<javadocVersion>${javaVersion}</javadocVersion>
 				</configuration>
 				<reportSets>
 					<reportSet>
@@ -763,6 +763,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>${checkstyleVersion}</version>
+				<configuration>
+					<configLocation>CheckstyleRules.xml</configLocation>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -897,7 +900,6 @@
 							<maxmemory>512m</maxmemory>
 							<quiet>true</quiet>
 							<source>${javaVersion}</source>
-							<javadocVersion>${javaVersion}</javadocVersion>
 						</configuration>
 						<reportSets>
 							<reportSet>

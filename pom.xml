@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.8-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>${project.artifactId}</description>
@@ -114,7 +114,7 @@
 		<connection>scm:git:git://github.com/hermod/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/hermod/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/hermod/hermod-java-parent.git</url>
-		<tag>hermod-java-parent-0.0.7</tag>
+		<tag>hermod-java-parent-0.0.1</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>

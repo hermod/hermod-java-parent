@@ -699,11 +699,11 @@
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>${nexusStagingPluginVersion}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<serverId>sonatype-nexus-staging</serverId>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
 		</plugins>

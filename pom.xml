@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.hermod</groupId>
 	<artifactId>hermod-java-parent</artifactId>
-	<version>0.0.8-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>${project.artifactId}</description>
@@ -15,61 +15,62 @@
 		<!-- encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- tools version -->
-		<javaVersion>1.6</javaVersion>
+		<javaVersion>11</javaVersion>
 		<javadocVersion>${javaVersion}</javadocVersion>
-		<mavenVersion>3.0.4</mavenVersion>
+		<mavenVersion>3.6.0</mavenVersion>
 		<!-- plugins version -->
 		<!-- core plugins version -->
-		<cleanPluginVersion>2.5</cleanPluginVersion>
-		<compilerPluginVersion>3.1</compilerPluginVersion>
-		<deployPluginVersion>2.8.1</deployPluginVersion>
-		<failsafePluginVersion>2.16</failsafePluginVersion>
-		<installPluginVersion>2.5.1</installPluginVersion>
-		<resourcesPluginVersion>2.6</resourcesPluginVersion>
-		<sitePluginVersion>3.3</sitePluginVersion>
-		<surefirePluginVersion>2.16</surefirePluginVersion>
-		<verifierPluginVersion>1.0</verifierPluginVersion>
+		<cleanPluginVersion>3.1.0</cleanPluginVersion>
+		<compilerPluginVersion>3.8.0</compilerPluginVersion>
+		<deployPluginVersion>3.0.0-M1</deployPluginVersion>
+		<failsafePluginVersion>3.0.0-M3</failsafePluginVersion>
+		<installPluginVersion>3.0.0-M1</installPluginVersion>
+		<resourcesPluginVersion>3.1.0</resourcesPluginVersion>
+		<sitePluginVersion>3.7.1</sitePluginVersion>
+		<surefirePluginVersion>3.0.0-M3</surefirePluginVersion>
+		<verifierPluginVersion>1.1</verifierPluginVersion>
 		<!-- packaging plugins version -->
-		<jarPluginVersion>2.4</jarPluginVersion>
+		<jarPluginVersion>3.1.1</jarPluginVersion>
 		<!-- reporting plugins version -->
-		<changelogPluginVersion>2.2</changelogPluginVersion>
-		<changesPluginVersion>2.9</changesPluginVersion>
-		<jdependPluginVersion>2.0-beta-2</jdependPluginVersion>
-		<checkstylePluginVersion>2.11</checkstylePluginVersion>
-		<javadocPluginVersion>2.9.1</javadocPluginVersion>
-		<jxrPluginVersion>2.4</jxrPluginVersion>
-		<linkcheckPluginVersion>1.1</linkcheckPluginVersion>
-		<pmdPluginVersion>3.0.1</pmdPluginVersion>
-		<projectInfoReportsPluginVersion>2.7</projectInfoReportsPluginVersion>
+		<changelogPluginVersion>2.3</changelogPluginVersion>
+		<changesPluginVersion>2.12.1</changesPluginVersion>
+		<jdependPluginVersion>2.0</jdependPluginVersion>
+		<checkstylePluginVersion>3.0.0</checkstylePluginVersion>
+		<javadocPluginVersion>3.0.1</javadocPluginVersion>
+		<jxrPluginVersion>3.0.0</jxrPluginVersion>
+		<linkcheckPluginVersion>1.2</linkcheckPluginVersion>
+		<pmdPluginVersion>3.11.0</pmdPluginVersion>
+		<projectInfoReportsPluginVersion>3.0.0</projectInfoReportsPluginVersion>
 		<!-- tools plugins version -->
-		<antrunPluginVersion>1.7</antrunPluginVersion>
-		<assemblyPluginVersion>2.4</assemblyPluginVersion>
-		<dependencyPluginVersion>2.8</dependencyPluginVersion>
-		<enforcerPluginVersion>1.3.1</enforcerPluginVersion>
-		<gpgPluginVersion>1.4</gpgPluginVersion>
-		<releasePluginVersion>2.4.2</releasePluginVersion>
-		<sourcePluginVersion>2.2.1</sourcePluginVersion>
+		<antrunPluginVersion>1.8</antrunPluginVersion>
+		<assemblyPluginVersion>3.1.1</assemblyPluginVersion>
+		<dependencyPluginVersion>3.1.1</dependencyPluginVersion>
+		<enforcerPluginVersion>3.0.0-M2</enforcerPluginVersion>
+		<gpgPluginVersion>1.6</gpgPluginVersion>
+		<releasePluginVersion>2.5.3</releasePluginVersion>
+		<sourcePluginVersion>3.0.1</sourcePluginVersion>
 		<!-- other plugins version -->
-		<coberturaPluginVersion>2.6</coberturaPluginVersion>
-		<jacocoPluginVersion>0.6.4.201312101107</jacocoPluginVersion>
-		<pitestPluginVersion>0.32</pitestPluginVersion>
-		<versionsPluginVersion>2.1</versionsPluginVersion>
-		<pdfPluginVersion>1.2</pdfPluginVersion>
-		<bundlePluginVersion>2.4.0</bundlePluginVersion>
+		<coberturaPluginVersion>2.7</coberturaPluginVersion>
+		<jacocoPluginVersion>0.8.3</jacocoPluginVersion>
+		<pitestPluginVersion>1.4.3</pitestPluginVersion>
+		<versionsPluginVersion>2.7</versionsPluginVersion>
+		<pdfPluginVersion>1.4</pdfPluginVersion>
+		<bundlePluginVersion>4.1.0</bundlePluginVersion>
 		<lifecycleMappingPluginVersion>1.0.0</lifecycleMappingPluginVersion>
-		<findbugsPluginVersion>2.5.3</findbugsPluginVersion>
+		<findbugsPluginVersion>3.0.5</findbugsPluginVersion>
 		<overviewPluginVersion>1.6</overviewPluginVersion>
-		<clirrPluginVersion>2.6.1</clirrPluginVersion>
+		<clirrPluginVersion>2.8</clirrPluginVersion>
 		<javaFormatterPluginVersion>0.4</javaFormatterPluginVersion>
-		<nexusStagingPluginVersion>1.5.1</nexusStagingPluginVersion>
-		<doxiaModuleMarkdown>1.5</doxiaModuleMarkdown>
+		<nexusStagingPluginVersion>1.6.8</nexusStagingPluginVersion>
+		<doxiaModuleMarkdown>1.8</doxiaModuleMarkdown>
 		<!-- dependencies version -->
-		<slf4jVersion>1.7.5</slf4jVersion>
-		<logbackVersion>1.0.13</logbackVersion>
-		<junitVersion>4.11</junitVersion>
-		<assertjVersion>1.5.0</assertjVersion>
-		<gsonVersion>2.2.4</gsonVersion>
-		<nettyVersion>4.0.12.Final</nettyVersion>
+		<slf4jVersion>1.8.0-beta2</slf4jVersion>
+		<logbackVersion>1.3.0-alpha4</logbackVersion>
+		<junitVersion>5.4.0-M1</junitVersion>
+		<junitLauncherVersion>1.4.0-M1</junitLauncherVersion>
+		<assertjVersion>3.11.1</assertjVersion>
+		<gsonVersion>2.8.5</gsonVersion>
+		<nettyVersion>5.0.0.Alpha2</nettyVersion>
 	</properties>
 	<organization>
 		<name>hermod</name>
@@ -107,9 +108,6 @@
 			<post>TODO</post>
 		</mailingList>
 	</mailingLists>
-	<prerequisites>
-		<maven>${mavenVersion}</maven>
-	</prerequisites>
 	<scm>
 		<connection>scm:git:git://github.com/hermod/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/hermod/${project.artifactId}.git</developerConnection>
@@ -141,13 +139,11 @@
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<uniqueVersion />
 			<id>sonatype-nexus-staging</id>
 			<name>Sonatype Nexus release repository</name>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 		<snapshotRepository>
-			<uniqueVersion />
 			<id>sonatype-nexus-snapshots</id>
 			<name>Sonatype Nexus snapshot repository</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -185,9 +181,27 @@
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
 				<version>${junitVersion}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junitVersion}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.vintage</groupId>
+				<artifactId>junit-vintage-engine</artifactId>
+				<version>${junitVersion}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-launcher</artifactId>
+				<version>${junitLauncherVersion}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -206,8 +220,8 @@
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
